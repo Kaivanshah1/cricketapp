@@ -7,7 +7,6 @@ import Navbar from "@/components/shared/navbar"
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6">
@@ -21,14 +20,16 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="space-x-4">
+                <Link href="/teams"> 
                 <Button size="lg" variant="default">Get Started</Button>
+                </Link>
                 <Button variant="outline" size="lg">Learn more</Button>
               </div>
             </div>
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6" id="features">
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 text-center">
               <div className="flex flex-col items-center space-y-3">
                 <Users className="h-12 w-12" />
@@ -39,16 +40,16 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col items-center space-y-3">
                 <Calendar className="h-12 w-12" />
-                <h3 className="text-lg font-bold">Match Scheduling</h3>
+                <h3 className="text-lg font-bold">Squad Management</h3>
                 <p className="text-sm text-muted-foreground">
-                  Schedule and organize matches, practices, and team events effortlessly.
+                Allow team managers to add, edit, and remove players from their squad.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-3">
                 <BarChart className="h-12 w-12" />
-                <h3 className="text-lg font-bold">Performance Analytics</h3>
+                <h3 className="text-lg font-bold">Player Profiles</h3>
                 <p className="text-sm text-muted-foreground">
-                  Track and analyze player and team performance with detailed statistics.
+                Include detailed profiles for each player, featuring statistics, batting/bowling averages, profiles, and career highlights.
                 </p>
               </div>
             </div>
